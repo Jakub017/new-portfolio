@@ -1,0 +1,633 @@
+$darkColor: #000319;
+$mainColor: #cbacf9;
+$lightColor: #e4ecff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+.section {
+    width: 100%;
+    background-color: #fff;
+    background-color: $darkColor;
+
+    &__container {
+        max-width: 1300px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding-block: 4rem;
+
+        &--hero {
+            padding-top: 12rem;
+            gap: 2rem;
+        }
+
+        &--contact {
+            gap: 4rem;
+            padding-block: 4rem;
+        }
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        color: #fff;
+
+        &--colored {
+            color: $mainColor;
+        }
+
+        &--left {
+            text-align: left;
+            margin: 0 0;
+        }
+    }
+}
+
+.nav {
+    width: 90%;
+    max-width: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(#04071d, #0c0e23) padding-box;
+    border: 1px solid rgba(54, 55, 73, 0.49);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem;
+    z-index: 999;
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        color: #c1c2d3;
+        transition: 0.2s color ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+            color: $mainColor;
+        }
+    }
+}
+
+.main-button {
+    border-radius: 1.4rem;
+    font-size: 1.6rem;
+    background: linear-gradient(#161a31, #06091f) padding-box,
+        linear-gradient(45deg, #6971a2, #272a3c) border-box;
+    color: #fff;
+    text-decoration: none;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    border: 1px solid transparent;
+    transition: 0.2s border-color ease-in-out;
+
+    &:hover {
+        border-color: $mainColor;
+    }
+}
+
+.hero {
+    width: 100%;
+    background-color: $darkColor;
+    background-image: url("../../../public/img/grid-pattern.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__top-text {
+        color: $lightColor;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+    }
+
+    &__title {
+        font-size: 4.2rem;
+        color: #fff;
+        max-width: 1000px;
+
+        &--colored {
+            color: $mainColor;
+        }
+    }
+
+    &__bottom-text {
+        color: $lightColor;
+        font-size: 1.6rem;
+    }
+
+    &__icon {
+        width: 2rem;
+    }
+}
+
+.about {
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        color: #c1c2d3;
+        text-align: left;
+        line-height: 2.4rem;
+
+        &--colored {
+            color: $mainColor;
+            font-weight: 600;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__image-container {
+        width: 100%;
+        max-width: 420px;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: #13162d;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-color: rgba(0, 3, 25, 0.1);
+        }
+    }
+
+    &__image-background {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__image {
+        width: 100%;
+        height: 450px;
+        border-radius: 1rem;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__link {
+        background: linear-gradient(#04071d, #0c0e23) padding-box,
+            linear-gradient(45deg, #6971a2, #272a3c) border-box;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: 1px solid transparent;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s border-color ease-in-out;
+
+        &:hover {
+            border-color: $mainColor;
+        }
+    }
+
+    &__icon {
+        color: #fff;
+        text-decoration: none;
+        width: 2.4rem;
+        height: 2.4rem;
+        transition: 0;
+    }
+}
+
+.projects {
+    min-height: 100vh;
+
+    &__title {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    &__items {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 3rem;
+        border-radius: 2rem;
+        background: linear-gradient(#04071d, #0c0e23) padding-box;
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    &__image-wrapper {
+        background-color: #13162d;
+        width: 100%;
+        height: 225px;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__image-background {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__description {
+        color: #c1c2d3;
+        font-size: 1.4rem;
+        line-height: 1.5;
+
+        &--colored {
+            color: $mainColor;
+            font-weight: 600;
+        }
+    }
+
+    &__image {
+        width: 250px;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        height: 200px;
+        transform: translate(-50%, 10%) rotate(2deg);
+        border-radius: 1rem;
+        z-index: 2;
+    }
+
+    &__stack {
+        display: flex;
+        gap: 0;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__tech {
+        border-radius: 50rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        background: linear-gradient(#04071d, #0c0e23) padding-box,
+            linear-gradient(45deg, #6971a2, #272a3c) border-box;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:first-child) {
+            margin-left: -0.5rem;
+        }
+    }
+
+    &__icon {
+        width: 2.2rem;
+
+        &--laravel {
+            fill: #ff2d20;
+        }
+
+        &--vue {
+            fill: #4fc08d;
+        }
+
+        &--tailwind {
+            fill: #06b6d4;
+        }
+
+        &--sass {
+            fill: #cc6699;
+        }
+
+        &--inertia {
+            fill: #9553e9;
+        }
+
+        &--docker {
+            fill: #2496ed;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        color: $mainColor;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        transition: 0.2s color ease-in-out;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.contact {
+    background-color: #000319;
+    background-image: url("../../../public/img/grid-pattern.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-size: 3.6rem;
+        color: #fff;
+
+        &--colored {
+            color: $mainColor;
+        }
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        color: #c1c2d3;
+        line-height: 1.5;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: 450px;
+        border-radius: 1rem;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__link {
+        background: linear-gradient(#04071d, #0c0e23) padding-box,
+            linear-gradient(45deg, #6971a2, #272a3c) border-box;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: 1px solid transparent;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s border-color ease-in-out;
+
+        &:hover {
+            border-color: $mainColor;
+        }
+    }
+
+    &__icon {
+        color: #fff;
+        text-decoration: none;
+        width: 2.4rem;
+        height: 2.4rem;
+        transition: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .projects {
+        &__items {
+            justify-content: space-between;
+            gap: 3rem;
+        }
+        &__item {
+            width: calc(50% - 2rem);
+        }
+    }
+
+    .about {
+        &__container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &__text {
+            width: 60%;
+        }
+
+        &__info {
+            width: 40%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-button {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        &__container {
+            padding-block: 8rem;
+
+            &--hero {
+                padding-top: 16rem;
+            }
+
+            &--contact {
+                padding-bottom: 4rem;
+            }
+        }
+
+        &__title {
+            font-size: 4.8rem;
+        }
+    }
+
+    .hero {
+        &__top-text {
+            font-size: 1.6rem;
+        }
+
+        &__title {
+            font-size: 7.2rem;
+        }
+
+        &__bottom-text {
+            font-size: 2.4rem;
+        }
+    }
+
+    .projects {
+        &__title {
+            font-size: 3.2rem;
+        }
+
+        &__description {
+            font-size: 1.8rem;
+        }
+
+        &__image-wrapper {
+            height: 300px;
+        }
+
+        &__image {
+            width: 340px;
+            height: 300px;
+        }
+
+        &__tech {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        &__icon {
+            width: 2.4rem;
+        }
+
+        &__link {
+            font-size: 1.8rem;
+        }
+    }
+
+    .nav {
+        top: 4rem;
+        padding: 2rem 4rem;
+
+        &__menu {
+            gap: 3rem;
+        }
+
+        &__link {
+            font-size: 1.6rem;
+        }
+    }
+
+    .about {
+        &__description {
+            font-size: 1.8rem;
+        }
+
+        &__text {
+            width: 70%;
+        }
+
+        &__info {
+            width: 30%;
+        }
+
+        &__title,
+        &__description {
+            max-width: 600px;
+        }
+    }
+
+    .contact {
+        &__description {
+            font-size: 1.8rem;
+        }
+
+        &__bottom {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (min-width: 1536px) {
+    .projects {
+        &__image-wrapper {
+            height: 350px;
+        }
+
+        &__image {
+            width: 80%;
+            height: 100%;
+        }
+    }
+}

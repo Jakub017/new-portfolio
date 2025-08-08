@@ -13,7 +13,7 @@
         />
 
         <title>Document</title>
-        @vite(['resources/js/app.js', 'resources/css/app.css']) @inertiaHead
+        @vite(['resources/js/app.js', 'resources/sass/style.scss']) @inertiaHead
     </head>
     <body>
         @inertia
