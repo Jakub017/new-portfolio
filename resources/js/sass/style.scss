@@ -28,7 +28,7 @@ $lightColor: #e4ecff;
 
         &--hero {
             padding-top: 12rem;
-            padding-bottom: 8rem;
+            // padding-bottom: 8rem;
             gap: 2rem;
         }
 
@@ -107,6 +107,32 @@ $lightColor: #e4ecff;
 
     &:hover {
         border-color: $mainColor;
+    }
+}
+
+.social {
+    background: linear-gradient(#04071d, #0c0e23) padding-box,
+        linear-gradient(45deg, #6971a2, #272a3c) border-box;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s border-color ease-in-out;
+
+    &:hover {
+        border-color: $mainColor;
+    }
+
+    &__icon {
+        color: #fff;
+        fill: #fff;
+        text-decoration: none;
+        width: 2.4rem;
+        height: 2.4rem;
     }
 }
 
@@ -225,32 +251,6 @@ $lightColor: #e4ecff;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-    }
-
-    &__link {
-        background: linear-gradient(#04071d, #0c0e23) padding-box,
-            linear-gradient(45deg, #6971a2, #272a3c) border-box;
-        padding: 1rem;
-        border-radius: 1rem;
-        border: 1px solid transparent;
-        width: 5rem;
-        height: 5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.2s border-color ease-in-out;
-
-        &:hover {
-            border-color: $mainColor;
-        }
-    }
-
-    &__icon {
-        color: #fff;
-        text-decoration: none;
-        width: 2.4rem;
-        height: 2.4rem;
-        transition: 0;
     }
 }
 
@@ -521,7 +521,6 @@ $lightColor: #e4ecff;
 
             &--hero {
                 padding-top: 16rem;
-                padding-bottom: 12rem;
             }
 
             &--contact {
