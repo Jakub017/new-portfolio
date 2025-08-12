@@ -1,0 +1,51 @@
+name: Deploy (CI builds assets + rsync build)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # Node: zbuduj front
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Install deps
+        run: npm ci
+      - name: Build
+        run: npm run build
+
+      # Wyślij TYLKO public/build na serwer (bez commitowania go w repo)
+      - name: Upload public/build via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -az --delete
+          path: public/build/
+          remote_path: /home/srv59939/domains/lipinskijakub.pl/public_html/public/build/
+          remote_host: ${{ secrets.SERVER_IP }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          remote_key: ${{ secrets.SERVER_KEY }}
+          remote_port: ${{ secrets.SERVER_PORT }}
+
+      # Backend: git pull + composer + artisan na serwerze
+      - name: Post-deploy over SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          port: ${{ secrets.SERVER_PORT }}
+          key: ${{ secrets.SERVER_KEY }}
+          script: |
+            cd /home/srv59939/domains/lipinskijakub.pl/public_html
+            git pull origin main
+            composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
+            php artisan migrate --force
+            php artisan optimize
