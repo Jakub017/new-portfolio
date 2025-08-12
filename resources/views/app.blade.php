@@ -4,6 +4,21 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content=" initial-scale=1.0" />
 
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-TMV4ZWS4R0"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-TMV4ZWS4R0");
+        </script>
+
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +27,6 @@
             rel="stylesheet"
         />
 
-        <title>Document</title>
         @vite(['resources/js/app.js', 'resources/sass/style.scss']) @inertiaHead
     </head>
     <body>

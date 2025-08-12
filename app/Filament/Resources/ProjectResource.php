@@ -56,6 +56,7 @@ class ProjectResource extends Resource
                     ->label('Opis')
                     ->columnSpanFull(),
                 Forms\Components\Select::make('Technologie')
+                    ->label('Technologie')
                     ->multiple()
                     ->preload()
                     ->relationship('techs', 'name'),

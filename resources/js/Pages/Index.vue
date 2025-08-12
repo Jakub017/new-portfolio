@@ -1,4 +1,42 @@
 <template>
+    <Head>
+        <!-- SEO -->
+        <title>Jakub Lipiński – Full-Stack Developer | Laravel & Vue.js</title>
+        <meta
+            name="description"
+            content="Portfolio of a Full-Stack Developer from Poland. I create modern web applications with Laravel and Vue.js – fast, scalable, and tailored to your needs."
+        />
+        <meta
+            name="keywords"
+            content="Jakub Lipiński, Full-Stack Developer, Laravel, Vue.js, Tailwind, TypeScript, web developer, portfolio, e-commerce, web applications"
+        />
+
+        <!-- Open Graph -->
+        <meta
+            property="og:title"
+            content="Jakub Lipiński – Full-Stack Developer | Laravel & Vue.js"
+        />
+        <meta
+            property="og:description"
+            content="Portfolio of a Full-Stack Developer from Poland. Modern web applications built with Laravel and Vue.js – fast, scalable, and tailored for the user."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://lipinskijakub.pl" />
+        <meta property="og:image" content="" />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Jakub Lipiński – Full-Stack Developer | Laravel & Vue.js"
+        />
+        <meta
+            name="twitter:description"
+            content="Portfolio of a Full-Stack Developer from Poland. Modern web applications built with Laravel and Vue.js – fast, scalable, and tailored for the user."
+        />
+        <meta name="twitter:image" content="" />
+    </Head>
     <nav class="nav">
         <ul class="nav__menu">
             <li class="nav__item">
@@ -170,6 +208,8 @@
                                 <span class="experience__skill"
                                     >Prestashop</span
                                 >
+                                <span class="experience__skill">Git</span>
+                                <span class="experience__skill">Docker</span>
                             </div>
                         </div>
                     </div>
@@ -200,11 +240,14 @@
                                 <span class="experience__skill"
                                     >JavaScript</span
                                 >
-                                <span class="experience__skill">SASS</span>
+                                <span class="experience__skill">Sass</span>
+
                                 <span class="experience__skill">Wordpress</span>
                                 <span class="experience__skill"
                                     >Prestashop</span
                                 >
+                                <span class="experience__skill">Git</span>
+                                <span class="experience__skill">Docker</span>
                             </div>
                         </div>
                     </div>
@@ -277,8 +320,9 @@ defineProps<{
     projects: Project[];
 }>();
 
+import { Head } from "@inertiajs/vue3";
+import { SquareArrowOutUpRight, ArrowUpRight } from "lucide-vue-next";
 import PrimaryButton from "../Components/PrimaryButton.vue";
 import ProjectCard from "../Components/ProjectCard.vue";
 import SocialIcon from "../Components/SocialIcon.vue";
-import { SquareArrowOutUpRight, ArrowUpRight } from "lucide-vue-next";
 </script>
