@@ -54,6 +54,11 @@
         </ul>
     </nav>
     <section class="section hero">
+        <img
+            src="../../../public/img/grid-pattern.png"
+            alt=""
+            class="hero__background"
+        />
         <div class="section__container section__container--hero">
             <p class="hero__top-text">MODERN WEB APPS WITH LARAVEL & VUE</p>
             <h1 class="hero__title">
@@ -256,6 +261,11 @@
         </div>
     </section>
     <footer class="section contact">
+        <img
+            src="../../../public/img/grid-pattern.png"
+            alt=""
+            class="contact__background"
+        />
         <div
             class="section__container section__container--contact section__container--pb-0"
         >
