@@ -40,10 +40,11 @@
                     <h2
                         class="section__title section__title--left about__title"
                     >
-                        Here's what I've been
+                        A bit about me and
                         <span class="section__title section__title--colored"
-                            >working on</span
+                            >how I approach</span
                         >
+                        development
                     </h2>
                     <p class="about__description">
                         I’m Jakub Lipiński, a Full-Stack Developer from Poland
@@ -124,6 +125,90 @@
                     <template #name>{{ project.name }}</template>
                     <template #excerpt>{{ project.excerpt }}</template>
                 </ProjectCard>
+            </div>
+        </div>
+    </section>
+    <section class="section experience">
+        <div class="section__container">
+            <h2 class="section__title">
+                Overview of my
+                <span class="section__title section__title--colored"
+                    >professional experience</span
+                >
+            </h2>
+            <div class="experience__container">
+                <div class="experience__items">
+                    <div class="experience__item">
+                        <span class="experience__date">Jan 2023 - Present</span>
+                        <div class="experience__text">
+                            <h4 class="experience__title">
+                                Full-stack Developer at
+                                <span
+                                    class="experience__title experience__title--colored"
+                                    >Agencja Digitalowa</span
+                                >
+                            </h4>
+                            <p class="experience__description">
+                                Developing and maintaining web applications
+                                using Laravel, Vue, Tailwind, and TypeScript.
+                                Built custom CMS solutions, e-commerce
+                                platforms, and integrations with external APIs.
+                                Collaborated closely with designers and project
+                                managers to deliver optimized, scalable
+                                products.
+                            </p>
+                            <div class="experience__skills">
+                                <span class="experience__skill">Laravel</span>
+                                <span class="experience__skill">Vue</span>
+                                <span class="experience__skill"
+                                    >TypeScript</span
+                                >
+                                <span class="experience__skill">Inertia</span>
+                                <span class="experience__skill">Tailwind</span>
+                                <span class="experience__skill">Sass</span>
+                                <span class="experience__skill">Wordpress</span>
+                                <span class="experience__skill"
+                                    >Prestashop</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience__item">
+                        <span class="experience__date"
+                            >Sep 2022 - Jan 2023</span
+                        >
+                        <div class="experience__text">
+                            <h4 class="experience__title">
+                                Front-end Developer at
+                                <span
+                                    class="experience__title experience__title--colored"
+                                    >Agencja Digitalowa</span
+                                >
+                            </h4>
+                            <p class="experience__description">
+                                Created responsive user interfaces with HTML,
+                                SASS, and JavaScript. Worked on WordPress and
+                                PrestaShop projects, ensuring performance
+                                optimization and cross-browser compatibility.
+                                Contributed to UX improvements and theme
+                                customization for client websites.
+                            </p>
+                            <div class="experience__skills">
+                                <span class="experience__skill"
+                                    >HTML & CSS</span
+                                >
+                                <span class="experience__skill"
+                                    >JavaScript</span
+                                >
+                                <span class="experience__skill">SASS</span>
+                                <span class="experience__skill">Wordpress</span>
+                                <span class="experience__skill"
+                                    >Prestashop</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

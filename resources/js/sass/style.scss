@@ -372,6 +372,26 @@ $lightColor: #e4ecff;
         &--docker {
             fill: #2496ed;
         }
+
+        &--html {
+            fill: #e34f26;
+        }
+
+        &--css {
+            fill: #663399;
+        }
+
+        &--javascript {
+            fill: #f7df1e;
+        }
+
+        &--typescript {
+            fill: #3178c6;
+        }
+
+        &--analytics {
+            fill: #e37400;
+        }
     }
 
     &__bottom {
@@ -394,6 +414,77 @@ $lightColor: #e4ecff;
         &:hover {
             color: #fff;
         }
+    }
+
+    &__icon {
+        transition: 0.2s transform ease-in-out;
+    }
+
+    &__link:hover &__icon {
+        transform: rotate(90deg);
+    }
+}
+
+.experience {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    &__date {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: #c1c2d3;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &--colored {
+            color: $mainColor;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        color: #fff;
+
+        &--colored {
+            color: $mainColor;
+        }
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        color: #c1c2d3;
+        line-height: 1.5;
+    }
+
+    &__skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    &__skill {
+        background: linear-gradient(#04071d, #0c0e23) padding-box,
+            linear-gradient(45deg, #6971a2, #272a3c) border-box;
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        color: #c1c2d3;
     }
 }
 
@@ -608,6 +699,42 @@ $lightColor: #e4ecff;
         &__title,
         &__description {
             max-width: 600px;
+        }
+    }
+
+    .experience {
+        &__item {
+            flex-direction: row;
+            // max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        &__items {
+            margin-top: 3rem;
+        }
+
+        &__text {
+            width: 85%;
+            gap: 2rem;
+        }
+
+        &__date {
+            display: block;
+            width: 15%;
+            font-size: 1.6rem;
+        }
+
+        &__title {
+            font-size: 2.4rem;
+        }
+
+        &__description {
+            font-size: 1.8rem;
+        }
+
+        &__skill {
+            font-size: 1.6rem;
+            padding: 0.6rem 1.2rem;
         }
     }
 

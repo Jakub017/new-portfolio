@@ -24,7 +24,7 @@
                 />
             </div>
             <a :href="link" target="_blank" class="projects__link"
-                >See live <ArrowUpRight
+                >See live <ArrowUpRight class="projects__icon"
             /></a>
         </div>
     </div>
