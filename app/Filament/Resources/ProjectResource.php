@@ -37,6 +37,9 @@ class ProjectResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Zdjęcie')
                     ->image()
+                    ->disk('public')
+                    ->directory('projects')
+                    ->visibility('public')
                     ->columnSpanFull()
                     ->required(),
                 Forms\Components\TextInput::make('name')

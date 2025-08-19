@@ -1,5 +1,5 @@
 <template>
-    <div class="projects__item">
+    <div class="projects__item animated">
         <div class="projects__image-wrapper">
             <img
                 src="../../../public/img/image-bgc.png"

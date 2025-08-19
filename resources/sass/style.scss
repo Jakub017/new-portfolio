@@ -114,6 +114,17 @@ $lightColor: #e4ecff;
     }
 }
 
+// .animated {
+//     transform: translateY(30px);
+//     opacity: 0;
+//     transition: 0.7s transform ease-in-out, 0.9s opacity ease-in-out;
+
+//     &--visible {
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
+// }
+
 .social {
     background: linear-gradient(#04071d, #0c0e23) padding-box,
         linear-gradient(45deg, #6971a2, #272a3c) border-box;
@@ -154,6 +165,8 @@ $lightColor: #e4ecff;
         left: 0;
         width: 100%;
         z-index: 1;
+        object-fit: cover;
+        height: 100%;
     }
 
     &__top-text {

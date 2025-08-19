@@ -60,18 +60,20 @@
             class="hero__background"
         />
         <div class="section__container section__container--hero">
-            <p class="hero__top-text">MODERN WEB APPS WITH LARAVEL & VUE</p>
-            <h1 class="hero__title">
+            <p class="hero__top-text animated">
+                MODERN WEB APPS WITH LARAVEL & VUE
+            </p>
+            <h1 class="hero__title animated animated--delay-1">
                 Building Reliable Interfaces with
                 <span class="hero__title hero__title--colored"
                     >Laravel and Vue.</span
                 >
                 Fast. Clean. Tailored for the User.
             </h1>
-            <p class="hero__bottom-text">
+            <p class="hero__bottom-text animated animated--delay-2">
                 Hi! I’m Jakub Lipiński, a Full-Stack Developer based in Poland
             </p>
-            <PrimaryButton type="link" href="#"
+            <PrimaryButton type="link" href="#" class="animated--delay-3"
                 >Download resume <SquareArrowOutUpRight class="hero__icon"
             /></PrimaryButton>
         </div>
@@ -151,7 +153,7 @@
     </section>
     <section class="section projects">
         <div class="section__container">
-            <h2 class="section__title">
+            <h2 class="section__title animated">
                 Here's what I've been
                 <span class="section__title section__title--colored"
                     >working on</span
@@ -173,7 +175,7 @@
     </section>
     <section class="section experience">
         <div class="section__container">
-            <h2 class="section__title">
+            <h2 class="section__title animated">
                 Overview of my
                 <span class="section__title section__title--colored"
                     >professional experience</span
@@ -181,7 +183,7 @@
             </h2>
             <div class="experience__container">
                 <div class="experience__items">
-                    <div class="experience__item">
+                    <div class="experience__item animated">
                         <span class="experience__date">Jan 2023 - Present</span>
                         <div class="experience__text">
                             <h4 class="experience__title">
@@ -218,7 +220,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="experience__item">
+                    <div class="experience__item animated">
                         <span class="experience__date"
                             >Sep 2022 - Jan 2023</span
                         >
@@ -270,7 +272,7 @@
             class="section__container section__container--contact section__container--pb-0"
         >
             <div class="contact__main">
-                <h2 class="section__title">
+                <h2 class="section__title animated">
                     Feel free to reach out if you'd like to
                     <span class="section__title section__title--colored"
                         >connect</span
@@ -280,7 +282,7 @@
                         >work
                     </span>
                 </h2>
-                <p class="contact__description">
+                <p class="contact__description animated">
                     If you'd like to talk about my work or have questions about
                     my experience, feel free to reach out. I'll get back to you
                     as soon as I can.
@@ -331,8 +333,68 @@ defineProps<{
 }>();
 
 import { Head } from "@inertiajs/vue3";
+import { onMounted } from "vue";
 import { SquareArrowOutUpRight, ArrowUpRight } from "lucide-vue-next";
 import PrimaryButton from "../Components/PrimaryButton.vue";
 import ProjectCard from "../Components/ProjectCard.vue";
 import SocialIcon from "../Components/SocialIcon.vue";
+
+onMounted(() => {
+    // Project Cards
+    const animatedItems = document.querySelectorAll(".animated");
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animated--visible");
+                }
+            });
+        },
+        {
+            threshold: 0.4,
+        }
+    );
+
+    animatedItems.forEach((item) => {
+        observer.observe(item);
+    });
+
+    // // Experience
+    // const experienceBlocks = document.querySelectorAll(".experience__item");
+    // const experienceObserver = new IntersectionObserver(
+    //     (entries, obs) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add("experience__item--visible");
+    //             }
+    //         });
+    //     },
+    //     {
+    //         threshold: 0.4,
+    //     }
+    // );
+
+    // experienceBlocks.forEach((block) => {
+    //     experienceObserver.observe(block);
+    // });
+
+    // // Headings
+    // const headings = document.querySelectorAll(".section__title--animated");
+    // const headingsObserver = new IntersectionObserver(
+    //     (entries) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add("section__title--visible");
+    //             }
+    //         });
+    //     },
+    //     {
+    //         threshold: 0.4,
+    //     }
+    // );
+
+    // headings.forEach((heading) => {
+    //     headingsObserver.observe(heading);
+    // });
+});
 </script>
