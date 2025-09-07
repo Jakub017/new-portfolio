@@ -50,7 +50,7 @@ class ProjectResource extends Resource
                     })
                     ->columnSpanFull()
                     ->maxLength(255),
-                Forms\Components\TextArea::make('excerpt')
+                Forms\Components\Textarea::make('excerpt')
                     ->label('Zajawka')
                     ->columnSpanFull()
                     ->required()
