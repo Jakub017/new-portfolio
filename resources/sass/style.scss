@@ -8,6 +8,8 @@ $lightColor: #e4ecff;
     box-sizing: border-box;
     font-size: 10px;
     font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
 }
 
 .section {
@@ -113,17 +115,6 @@ $lightColor: #e4ecff;
         border-color: $mainColor;
     }
 }
-
-// .animated {
-//     transform: translateY(30px);
-//     opacity: 0;
-//     transition: 0.7s transform ease-in-out, 0.9s opacity ease-in-out;
-
-//     &--visible {
-//         transform: translateY(0);
-//         opacity: 1;
-//     }
-// }
 
 .social {
     background: linear-gradient(#04071d, #0c0e23) padding-box,
@@ -636,6 +627,10 @@ $lightColor: #e4ecff;
 }
 
 @media (min-width: 1024px) {
+    * {
+        scroll-padding-top: 4rem;
+    }
+    
     .main-button {
         font-size: 1.8rem;
     }

@@ -40,16 +40,16 @@
     <nav class="nav">
         <ul class="nav__menu">
             <li class="nav__item">
-                <a href="#" class="nav__link">About</a>
+                <a href="#about" id="about-link" class="nav__link">About</a>
             </li>
             <li class="nav__item">
-                <a href="#" class="nav__link">Projects</a>
+                <a href="#projects" id="projects-link" class="nav__link">Projects</a>
             </li>
             <li class="nav__item">
-                <a href="#" class="nav__link">Experience</a>
+                <a href="#experience" id="experience-link" class="nav__link">Experience</a>
             </li>
             <li class="nav__item">
-                <a href="#" class="nav__link">Contact</a>
+                <a href="#contact" id="contact-link" class="nav__link">Contact</a>
             </li>
         </ul>
     </nav>
@@ -78,7 +78,7 @@
             /></PrimaryButton>
         </div>
     </section>
-    <section class="section about">
+    <section id="about" class="section about">
         <div class="section__container">
             <div class="about__container">
                 <div class="about__text">
@@ -151,7 +151,7 @@
             </div>
         </div>
     </section>
-    <section class="section projects">
+    <section id="projects" class="section projects">
         <div class="section__container">
             <h2 class="section__title animated">
                 Here's what I've been
@@ -173,7 +173,7 @@
             </div>
         </div>
     </section>
-    <section class="section experience">
+    <section id="experience" class="section experience">
         <div class="section__container">
             <h2 class="section__title animated">
                 Overview of my
@@ -262,7 +262,7 @@
             </div>
         </div>
     </section>
-    <footer class="section contact">
+    <footer id="contact" class="section contact">
         <img
             src="../../../public/img/grid-pattern.png"
             alt=""
@@ -339,62 +339,5 @@ import PrimaryButton from "../Components/PrimaryButton.vue";
 import ProjectCard from "../Components/ProjectCard.vue";
 import SocialIcon from "../Components/SocialIcon.vue";
 
-onMounted(() => {
-    // Project Cards
-    const animatedItems = document.querySelectorAll(".animated");
-    const observer = new IntersectionObserver(
-        (entries, obs) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animated--visible");
-                }
-            });
-        },
-        {
-            threshold: 0.4,
-        }
-    );
 
-    animatedItems.forEach((item) => {
-        observer.observe(item);
-    });
-
-    // // Experience
-    // const experienceBlocks = document.querySelectorAll(".experience__item");
-    // const experienceObserver = new IntersectionObserver(
-    //     (entries, obs) => {
-    //         entries.forEach((entry) => {
-    //             if (entry.isIntersecting) {
-    //                 entry.target.classList.add("experience__item--visible");
-    //             }
-    //         });
-    //     },
-    //     {
-    //         threshold: 0.4,
-    //     }
-    // );
-
-    // experienceBlocks.forEach((block) => {
-    //     experienceObserver.observe(block);
-    // });
-
-    // // Headings
-    // const headings = document.querySelectorAll(".section__title--animated");
-    // const headingsObserver = new IntersectionObserver(
-    //     (entries) => {
-    //         entries.forEach((entry) => {
-    //             if (entry.isIntersecting) {
-    //                 entry.target.classList.add("section__title--visible");
-    //             }
-    //         });
-    //     },
-    //     {
-    //         threshold: 0.4,
-    //     }
-    // );
-
-    // headings.forEach((heading) => {
-    //     headingsObserver.observe(heading);
-    // });
-});
 </script>
